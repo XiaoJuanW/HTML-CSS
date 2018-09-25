@@ -1,0 +1,27 @@
+<!-- img 
+默认不会独占一行
+不指定宽高没，默认图片本身宽高
+如果不想让图片变形，制定width或者height一个就行，系统会自动根据算出等比的height或weight
+src：source
+title： 鼠标悬停在图片上，显示的弹出框的内容
+alt：alternate 找不到图片显示的文字 -->
+
+
+<!-- br
+在html中可以换行
+注意点：多个br标签可以连续使用，使用了多少个br就换了多少行
+由于HTML的作用是用来给文本语义化，而br标签的语义是不另起一个段落换行，所以在企业开发中很少使用br标签
+<br> -->
+<img src="img/ma.jpg" alt="" title="马思纯"><br><br>
+<img src="img/ma.jpg" alt="" width="400"><br>
+<img src="img/ma.jpg" alt="" height="200"><br>
+
+
+<!-- 路径问题
+其实想给src赋值有两种方法
+1、相对路径
+每次从.html文件所在的文件夹开始查找
+2、绝对路径（几乎不用，可移植性不好）
+从指定的盘符开始查找
+ -->
+
