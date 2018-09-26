@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    span,
+    a,
+    b,
+    strong {
+      display: inline-block;
+      border: 5px solid black;
+      width: 100px;
+      height: 100px;
+      padding: 20px;
+      margin: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 什么是盒子模型？
+    一种形象的比喻
+  在HTML中，所有的标签都可以设置
+  宽度高度 == 指定可以存放内容的区域
+  内边距 == padding
+  边框   == border
+  外边距  == margin -->
+
+  <!-- 
+    1、内容的宽度和高度  
+    通过标签的width/height属性设置的宽度和高度
+    2、元素的宽度额高度
+    宽度 = 左边框 + 左内边距 + width + 右内边距 + 右边框 
+    高度 = 上边框 + 上内边距 + height + 下内边距 + 下边框 
+    3、元素空间的宽度和高度
+    宽度 = 左外边距 + 左边框 + 左内边距 + width + 右内边距 + 右边框 + 右外边距
+    高度  同理
+   -->
+
+   <!-- box-sizing属性
+    1、content-box默认：宽度和高度分别应用到元素的内容框。在宽度和高度之外绘制元素的内边距和边框。
+    2、border-box 为元素设定的宽度和高度决定了元素的边框盒。-->
+
+  <!-- 注意点
+    1、如果两个盒子是嵌套关系，那么设置了里面一个盒子的顶部外边距，外面一个盒子也会被顶下来
+    2、如果外面的盒子不想被顶下来，那么可以给外边的盒子设置边框border属性
+    3、在企业开发中，一般情况下需要控制嵌套关系盒子之间的距离，应该首先考虑padding，其次再考虑margin；
+    margin本质是控制兄弟关系之间的间距的
+    4、在嵌套关系的盒子中，可以用margin：0 auto；的方式来控制里面盒子水平居中
+    5、margin：auto 0; 无效。只对水平方向有效，对垂直方向无效 -->
+    
+  <span>我是span</span>
+  <a href="">我是超链接</a>
+  <b>我是加粗</b>
+  <strong>我是强调</strong>
+</body>
+
+</html>
