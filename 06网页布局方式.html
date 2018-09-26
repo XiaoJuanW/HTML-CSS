@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .box1 {
+      float: left;
+      /* display: inline-block; */
+      width: 100px;
+      height: 100px;
+      background: red;
+    }
+    .box2 {
+      /* float: right; */
+      /* display: inline-block; */
+      width: 150px;
+      height: 150px;
+      background: blue;
+    }
+  </style>
+</head>
+<body>
+  <!-- 
+    什么是网页布局的方式？
+    指浏览器是如何对网页中的元素进行排版的
+
+    1、标准流（文档流\普通流）排版方式
+    1.1默认排版方式。
+    1.2在CSS中将元素分为三类：块级元素/行内元素/行内块元素
+    1.3在标准流中有两种排版方式：垂直排版（块级元素）&水平排版（行内/行内块）
+
+    2、浮动流排版
+    2.1浮动流是一种“半脱离标准流”的排版方式。
+    2.2浮动流只有一种排版方式，就是水平排版，它只能设置某个元素左对齐或者右对齐，
+    注意点：没有居中对齐
+    特点：
+    ①在浮动流中不区分块级元素、行内元素、行内块元素，无论哪一种都可以水平排版
+    ②无论哪一种元素都可以设置宽高
+
+    什么是浮动元素的脱标？
+    脱标：脱离标准文档流
+    当一个元素浮动之后，那么这个元素看上去就像被从标准流中删除了一样，这个就是浮动元素脱标。
+    影响：如果前面一个元素浮动了，而后面一个元素没有浮动，那么这时，前面一个就会盖住后面一个元素。
+
+    3、定位流排版 
+  -->
+  <div>我是div</div>
+  <h1>我是标题</h1>
+  <p>我是段落</p>
+
+  <hr>
+
+  <span>span</span>
+  <strong>strong</strong>
+  <b>b</b>
+
+  <hr>
+
+  <div class="box1"></div>
+  <div class="box2"></div>
+  
+</body>
+</html>
