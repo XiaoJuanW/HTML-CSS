@@ -64,11 +64,16 @@
   （弊端）如果以body作为参考点，是以body的首屏作为参考点，而不是整个网页的宽度个高度（可滑动）作为参考点。
   绝对定位元素的会忽略父元素的padding -->
 
+  <!-- 如何让绝对定位的元素水平居中？
+  设置绝对定位的元素的left：50%
+  然后设置绝对定位元素margin-left：-元素宽度一半px -->
+
   <div class="box1"></div>
   <div class="box2">
     <div class="son"></div>
   </div>
   <div class="box3"></div>
   <span>我是span</span>
+
 </body>
 </html>

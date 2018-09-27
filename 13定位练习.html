@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    div {
+      width: 300px;
+      height: 300px;
+      margin: 0 auto;
+      border: 1px solid gray;
+      position: relative;
+    }
+
+    div img {
+      width: 300px;
+    }
+
+    div .level {
+      width: 20px;
+      height: 20px;
+      background: url(img/timg.jpeg);
+      background-position: -25px -125px;
+      /* display: inline-block; */
+      position: absolute;
+      left: 5px;
+      top: 5px;
+    }
+
+    div .hot {
+      width: 88px;
+      height: 30px;
+      background: url(img/timg.jpeg);
+      background-position: -425px -50px;
+      /* display: inline-block; */
+      position: absolute;
+      left: -10px;
+      top: 100px;
+
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 子绝父相 -->
+  <div>
+    <img src="img/ma.jpg" alt="">
+    <span class="level"></span>
+    <span class="hot"></span>
+    马思纯
+  </div>
+</body>
+
+</html>
