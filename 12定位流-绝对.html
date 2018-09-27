@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    div {
+      width: 200px;
+      height: 200px;
+    }
+    .box1 {
+      background: red;
+    }
+    .box2 {
+      background: green;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      border: 20px solid black;
+      padding: 30px;
+    }
+    .son {
+      width: 100px;
+      height: 100px;
+      background: pink;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+    .box3 {
+      background: blue;
+    }
+    span {
+      width: 100px;
+      height: 100px;
+      background: yellow;
+      /* 设置了absolute之后，width和height有效 */
+      position: absolute;
+    }
+    
+  </style>
+</head>
+<body>
+  <!-- 定位流分类
+  2、绝对定位:absolute
+  含义：生成绝对定位的元素，相对于 static 定位以外的第一个父元素进行定位。
+  元素的位置通过 "left", "top", "right" 以及 "bottom" 属性进行规定。
+  注意点：
+  ① 绝对定位的元素脱离标准流。
+  ② 因为脱离标准流，所以不区分块级、行内、行内块元素的。
+
+  规律：
+  ① 默认情况下，所有绝对定位的元素，无论有没有祖先元素都会以body作为参考点.
+  ② 如果一个绝对定位的元素有祖先元素，并且祖先元素也是定位流（出static之外），
+  那么这个绝对定位的元素就会以定位流的那个祖先元素作为参考点。
+
+  注意点：
+  （弊端）如果以body作为参考点，是以body的首屏作为参考点，而不是整个网页的宽度个高度（可滑动）作为参考点。
+  绝对定位元素的会忽略父元素的padding -->
+
+  <div class="box1"></div>
+  <div class="box2">
+    <div class="son"></div>
+  </div>
+  <div class="box3"></div>
+  <span>我是span</span>
+</body>
+</html>

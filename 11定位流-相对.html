@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    div {
+      width: 100px;
+      height: 100px;
+    }
+    .box1 {
+      background: red;
+    }
+    .box2 {
+      background: green;
+      position: relative;
+      top: 20px;
+      left: 20px;
+      /* right: 20px; */
+      margin-top: 20px;
+    }
+    .box3 {
+      background: blue;
+    }
+    
+  </style>
+</head>
+<body>
+  <!-- 定位流分类
+  1、相对定位：relative
+  含义：相对于自己以前在标准流中的位置移动,结合top、left等
+  注意点：
+  ① 不脱离标准流，会继续在标准流中占用一份空间。（弊端，不利于布局界面）
+  ② 在相对定位中，同一个方向上的定位属性只能使用一个，left&bottom只能有一个，left个right只能有一个
+  ③ 由于相对定位是不脱离标准流的，所以在相对定位中是区分块级、行内、行内块元素的。
+  ④ 由于相对定位是不脱离标准流的，并且会在标准流中占用一份空间，所以当给相对定位的元素设置margin时会影响标准流的布局。
+  应用场景：
+  元素微调。
+  配合绝对定位使用。 -->
+  <div class="box1"></div>
+  <div class="box2"></div>
+  <div class="box3"></div>
+</body>
+</html>
