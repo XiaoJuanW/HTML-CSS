@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    p {
+      margin: 0;
+      width: 100px;
+      height: 20px;
+      /* height: 20px; */
+      background: green;
+      /* 这句话之后，都排列在一行，因为浮动元素不能撑起父元素高度 */
+      float: left;
+    }
+    
+    /* 4、伪元素选择器清除浮动 */
+    .class::after {
+      /* 设置添加子元素的内容是空 */
+      content: '';  
+      /* 设置添加子元素为块级元素 */
+      display: block;
+      /* 设置添加的子元素的高度0 */
+      height: 0;
+      /* 设置添加子元素看不见 */
+      visibility: hidden;
+      /* 设置clear：both */
+      clear: both;
+    }
+    /* 用伪类清除浮动时，用此适配ie6以下 */
+    .box1 {  
+      *zoom: 1;
+    }
+
+    /* 5、利用overflow: hidden清除浮动 */
+    .box1 {
+      overflow: hidden;
+      *zoom: 1;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 清除浮动
+  1、给前面元素设置高度。（尽量不用） -->
+  <!-- <div style="background: red; height: 20px;"> -->
+  <div class="box1" style="background: red;">
+    <p>1</p>
+    <p>2</p>
+    <p>3</p>
+
+    <!--  3.2内墙法：在第一个盒子中，所有子元素最后添加一个额外的块级元素，设置clear: both; 
+    注意点：
+    ① 内墙法可以让第二个盒子使用margin-top属性，也可以让第一个盒子使用margin-bottom属性。-->
+    <!-- <div style="clear: both;"></div> -->
+
+  </div>
+  <!-- 2、给后面的盒子添加clear属性
+  none：默认取值，按照浮动元素的排序规则来排序。
+  left：当前元素不要找前面的左浮动。
+  right：当前元素不要找前面的右浮动。 
+  both：不要找前面的左浮动和右浮动 
+  注意点：当给某个元素添加clear属性后，该元素的margin失效。如下 -->
+
+  <!-- 3、隔墙法
+  3.1 外墙法:在两个盒子之间添加一个额外的块级元素，设置clear: both;
+  注意点：
+  ① 外墙法可以让第二个盒子使用margin-top属性，但是不可以让第一个盒子使用margin-bottom属性。
+  ② 所以不要设置margin，而是直接在额外标签设置height，实现margin的效果 -->
+  <!-- <div style="clear: both; height: 20px;"></div> -->
+
+  <div style="background: blue;">
+    <p>4</p>
+    <p>5</p>
+    <p>6</p>
+  </div>
+
+  <!--  外墙法、内墙法区别
+  外墙法不能撑起第一个盒子的高度，而内墙法能撑起第一个盒子的高度-->
+
+  <hr>
+  
+  <!-- 5、overflow:hidden作用
+  5.1 让超出标签的内容不显示
+  5.2 清除浮动
+  5.3 在父子元素中：给父元素设置此属性，子元素设置margin-top之后。父元素不会被顶下来 -->
+   <div style="width: 150px; height: 150px; overflow: hidden; background: yellow">
+      1.打开你的苹果手机。进入到桌面之后，点击系统的设置选项。2.进入设置选项之后，点击其中的通用选项。3.击后，往下滑动屏幕，选择辅助功能下方的【储存空间和iCloud用量】选项，点击进入。4.进入之后我们可以看到下方iCloud的储存空间，点击iCloud项下方的【管理储存空间】。5.进入之后我们可以看到下方iCloud的储存空间，点击最下方的【管理储存空间】。6.点击备份项下面“XXX的iPhone”进入。7.进入后可直接点击【删除备份】。
+   </div>
+
+</body>
+
+</html>
