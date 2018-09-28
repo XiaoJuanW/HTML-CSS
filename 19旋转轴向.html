@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    ul {
+      width: 800px;
+      height: 500px;
+      border: 1px solid black;
+      margin: 0 auto;
+
+    }
+
+    ul li {
+      list-style: none;
+      width: 200px;
+      height: 200px;
+      margin: 0 auto;
+      margin-top: 50px;
+      border: 1px solid green;
+
+      /* 
+      透视属性：近大远小，表示距离多远在观看
+      注意点：透视属性必须添加到需要呈现近大远小效果的元素的父级元素上面 */
+      perspective: 500px;
+    }
+
+    ul li img {
+      width: 200px;
+      height: 200px;
+    }
+
+    ul li:nth-child(1) {
+      /* 默认情况下所有的元素都是围绕Z轴旋转 */
+      transform: rotateZ(30deg);
+    }
+
+    ul li:nth-child(2) img {
+      transform: rotateX(50deg);
+    }
+
+    ul li:nth-child(3) img {
+      transform: rotateY(50deg);
+    }
+  </style>
+</head>
+
+<body>
+  <ul>
+    <li><img src="img/1.jpg" alt=""></li>
+    <li><img src="img/2.jpg" alt=""></li>
+    <li><img src="img/3.jpg" alt=""></li>
+  </ul>
+</body>
+
+</html>

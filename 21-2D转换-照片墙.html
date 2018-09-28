@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    ul {
+      margin: 100px auto;
+      height: 400px;
+      background: pink;
+      text-align: center;
+    }
+
+    ul li {
+      display: inline-block;
+      list-style: none;
+      width: 150px;
+      height: 200px;
+      background: rebeccapurple;
+      margin-top: 100px;
+      transition: transform 1s;
+      position: relative;
+      box-shadow: 0 0 10px;
+    }
+
+    ul li:nth-child(1) {
+      transform: rotate(30deg)
+    }
+
+    ul li:nth-child(2) {
+      transform: rotate(-40deg)
+    }
+
+    ul li:nth-child(3) {
+      transform: rotate(10deg)
+    }
+
+    ul li:nth-child(4) {
+      transform: rotate(45deg)
+    }
+
+    ul li img {
+      width: 160px;
+      border: 5px solid white;
+      box-sizing: border-box;
+    }
+
+    ul li:hover {
+      /* transform: none; */
+      transform: scale(1.5, 1.5);
+      /* hover时照片到最上面，但是z-index只对定位流有效，所以设置li relative */
+      z-index: 10;
+    }
+  </style>
+</head>
+
+<body>
+
+  <ul>
+    <li><img src="img/7.jpg" alt=""></li>
+    <li><img src="img/8.jpg" alt=""></li>
+    <li><img src="img/9.jpg" alt=""></li>
+    <li><img src="img/10.jpg" alt=""></li>
+  </ul>
+
+</body>
+
+</html>
