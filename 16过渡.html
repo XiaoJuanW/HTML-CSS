@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    div {
+      width: 150px;
+      height: 100px;
+      background: red;
+      /* 告诉系统哪个属性需要执行过渡效果，多个属性变化，逗号隔开 */
+      /* transition-property: width, background; */
+      /* transition-duration: 3s, 5s; */
+      /* 延迟多少秒之后开始过渡动画 */
+      /* transition-delay: 1s; */
+
+      /* transtion：过渡属性 过渡时长 运动速度 延迟时长 */
+      /* transition: width 3s linear 1s, background 3s; */
+      
+      /* all表示所有改变的属性 */
+      transition: all 3s;
+    }
+    /* hover伪类选择器可以用在任意标签上 */
+    div:hover {
+      width: 300px;
+      background: blue;
+    }
+
+    ul {
+      width: 800px;
+      height: 500px;
+      margin: 0 auto;
+      background: pink;
+      border: 1px solid black;
+    }
+    ul li {
+      list-style: none;
+      width: 100px;
+      height: 50px;
+      margin-top: 50px;
+      background: blue;
+      transition-property: margin-left;
+      transition-duration: 2s;
+    }
+    ul:hover li {
+      margin-left: 700px;
+    }
+    ul li:nth-child(1) {
+      transition-timing-function: linear;
+    }
+    ul li:nth-child(2) {
+      transition-timing-function: ease;
+    }
+    ul li:nth-child(3) {
+      transition-timing-function: ease-in;
+    }
+    ul li:nth-child(4) {
+      transition-timing-function: ease-out;
+    }
+    ul li:nth-child(5) {
+      transition-timing-function: ease-in-out;
+    }
+  </style>
+</head>
+<body>
+  <!-- 过渡三要素：
+  必须有属性发生变化
+  告诉系统哪个属性执行过渡效果
+  过渡效果持续时长 -->
+
+  <!-- 过渡连写格式
+  transtion：过渡属性 过渡时长 运动速度 延迟时长
+  注意点：
+  ① 如果想给多个属性添加过渡效果，也是逗号隔开
+  ② 连写的时候，可以省略后面的两个参数。因为前面两个参数已经满足的过渡的三要素
+  ③ 如果多个属性运动的时间，持续时间都一样，简写transition: all 3s; -->
+  <div></div>
+  <ul>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+</body>
+</html>

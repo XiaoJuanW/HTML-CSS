@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .box {
+      width: 100%;
+      height: 100px;
+      background: red;
+      text-align: center;
+    }
+    .box span {
+      display: inline-block;
+      width: 50px;
+      height: 100px;
+      /* background: palegoldenrod; */
+      line-height: 100px;
+      font-size: 30px;
+      transition: width 1s;
+    }
+    .box:hover span {
+      width: 100px;
+    }
+
+    ul {
+      width: 960px;
+      height: 300px;
+      margin: 100px auto;
+      overflow: hidden;
+    }
+    li {
+      list-style: none;
+      width: 160px;
+      height: 300px;
+      float: left;
+      background: yellowgreen;
+      transition: width 0.5s;
+    }
+    ul:hover li {
+      width: 100px;
+    }
+    ul li:hover {
+      width: 460px;
+    }
+  </style>
+</head>
+<body>
+弹性效果
+<hr>
+  <div class="box">
+    <span>我</span>
+    <span>在</span>
+    <span>做</span>
+    <span>过</span>
+    <span>渡</span>
+    <span>练</span>
+    <span>习</span>
+  </div>
+  <hr>
+  手风琴效果
+  <hr>
+  <ul>
+    <li><img src="img/1.jpg" height="300" alt=""></li>
+    <li><img src="img/2.jpg" height="300" alt=""></li>
+    <li><img src="img/3.jpg" height="300" alt=""></li>
+    <li><img src="img/4.jpg" height="300" alt=""></li>
+    <li><img src="img/5.jpg" height="300" alt=""></li>
+    <li><img src="img/6.jpg" height="300" alt=""></li>
+  </ul>
+</body>
+</html>
