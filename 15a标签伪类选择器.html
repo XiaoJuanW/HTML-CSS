@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	   /*love-hate原则：伪类顺序不能改，会出现层级混乱而引发问题*/
+	    /*未被访问过的链接*/
+		a:link {   
+			color: white;
+      text-decoration: none;
+		}
+		/*被访问过的链接*/
+		a:visited {
+			color: green;
+		}
+		/*鼠标悬浮在元素上时*/
+		a:hover {
+			color: red;
+      background: lightblue;
+		}
+		/*鼠标点击在元素上时*/
+		a:active {
+			color: yellow;
+		}
+
+
+		/*元素获得焦点的时候*/
+		.txtName:focus {
+			background-color: gray;
+		}
+		a:focus {
+			font-size: 20px;
+		}
+
+    ul li {
+      width: 120px;
+      height: 40px;
+      float: left;
+      background: purple;
+      text-align: center;
+      list-style: none;
+      line-height: 40px;
+    }
+    ul li a {
+      width: 120px;
+      height: 40px;
+      display: inline-block;
+    }
+	</style>
+</head>
+<body>
+	<!-- <a href="#">当前网站</a>
+	<a href="http://www.baidu.com">当前网站</a>
+	<a href="http://www.sina.com">当前网站</a>
+	<a href="http://www.yahoo.com">当前网站</a>
+  <a href="#">当前网站</a> -->
+
+  <!-- <input type="text" name="txtName"> -->
+  
+  <hr>
+
+  <!-- 
+  经验：
+  a标签的伪类选择器最好写在标签选择器后面
+  a标签盒子相关的属性都写在标签选择器中（显示模式、宽度、高度、padding...）
+  a标签文字/背景相关的都写在伪类选择器中 -->
+  <ul style="background: pink;">
+    <li><a href="#">我是导航</a></li>
+    <li><a href="#">我是导航</a></li>
+    <li><a href="#">我是导航</a></li>
+    <li><a href="#">我是导航</a></li>
+    <li><a href="#">我是导航</a></li>
+  </ul>
+</body>
+</html>
