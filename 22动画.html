@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .box1 {
+      width: 100px;
+      height: 50px;
+      background-color: red;
+      /* transition: margin-left 2s; */
+
+      /* ① 告诉系统需要执行哪个动画 */
+      animation-name: move;
+
+      /* ③ 告诉系统动画持续时长 */
+      animation-duration: 3s;
+
+      /* 其他属性 */
+      /* 延迟多少时间 */
+      animation-delay: 1s;
+      /* 动画速度曲线 */
+      animation-timing-function: ease-out;
+      /* 动画执行几次 */
+      animation-iteration-count: 3;
+      /* 是否逆向 默认normal 往返算2次动画*/
+      animation-direction: alternate;
+
+      /* 连写 */
+      /* animation: move 3s ease-out 1s 3 alternate; */
+    }
+
+    /* ② 告诉系统我们需要自己创建一个名叫joy的动画*/
+    @keyframes move {
+      from {
+        margin-left: 0;
+      }
+
+      to {
+        margin-left: 500px;
+      }
+    }
+
+    .box1:hover {
+      /* margin-left: 500px; */
+      /* 规定动画是否正在运行或暂停。默认是 "running"。 */
+      animation-play-state: paused;
+    }
+
+
+    .box2 {
+      width: 100px;
+      height: 50px;
+      background-color: palevioletred;
+      position: absolute;
+      top: 0;
+      left: 0;
+      animation-name: rec;
+      animation-duration: 4s;
+    }
+
+    @keyframes rec {
+      0% {
+        top: 0;
+        left: 0;
+      }
+
+      25% {
+        top: 0;
+        left: 300px;
+      }
+
+      50% {
+        top: 300px;
+        left: 300px;
+      }
+
+      75% {
+        top: 300px;
+        left: 0;
+      }
+
+      100% {
+        top: 0;
+        left: 0;
+      }
+    }
+
+    .box3 {
+      width: 200px;
+      height: 200px;
+      background-color: rebeccapurple;
+      margin: 100px auto;
+      animation-name: rotate;
+      animation-duration: 3s;
+      animation-delay: 1s;
+      animation-fill-mode: forwards;
+    }
+    /* 
+     animation-fill-mode指定等待状态和结束状态的样式
+     none	不做任何改变
+     forwards	让元素结束的时候的状态保持最后一帧的样式
+     backwards	让元素等待状态的时候显示第一帧的样式
+     both	让元素等待状态显示动画第一帧样式；让元素结束动画保持动画最后一帧的样式
+     */
+
+    /* 
+    通过观察，动画是有一定的状态的
+    等待状态
+    执行状态
+    结束状态
+     */
+    @keyframes rotate {
+      0% {
+        transform: rotate(10deg);
+      }
+      50% {
+        transform: rotate(50deg);
+      }
+      100% {
+        transform: rotate(170deg);
+      }
+    }
+    
+  </style>
+</head>
+
+<body>
+  <!-- 
+    1、过渡和动画的异同
+    1.1不同点
+    过渡必须人为的触发，动画不需要人为触发
+    1.2相同点
+    都是用来给元素添加动画
+    都是系统新增的一些属性
+    都需要满足三要素才会有动画效果
+   -->
+  <div class="box1"></div>
+
+  <div class="box2"></div>
+
+  <div class="box3"></div>
+</body>
+
+</html>
