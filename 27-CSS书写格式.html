@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>01书写CSS的案例</title>
+  <!-- 1、内嵌CSS样式 -->
+  <style type="text/css">
+    /*将某一个CSS文件的样式直接导入到当前的位置*/
+    /*导入样式必须写在其他样式设置之前*/
+
+    /* 4、导入样式*/
+    /*@import url(CSS/main.css);*/
+    /*  @import是CSS2.1推出的，所以有兼容问题 */
+
+    /* 企业开发一般用外链样式。因为： */
+    /* 外链样式在显示界面的时候会先加载CSS样式，再加载结构，所以用户看到界面时一定设置了样式 */
+    /* 导入样式会先加载结构再加载样式，所以用户看到了不一定设置了样式 */
+    
+    p {
+      color: green;
+      /*设置前景色，也就是字体颜色*/
+      background-color: silver;
+    }
+
+    ul {
+      background: red;
+    }
+  </style>
+
+  <!-- 3、外链CSS样式 -->
+  <link rel="stylesheet" type="text/css" href="CSS/main.css">
+</head>
+
+<body>
+  <!-- 1、行内CSS样式 -->
+  <h1 style="color: red; font-size: 12px;">这是我的练习</h1>
+  <p>段落</p>
+  <!-- ul>(li>a[href="#"])*3 -->
+  <ul>
+    <li><a href="#">上海</a></li>
+    <li><a href="#">北京</a></li>
+    <li><a href="#">广州</a></li>
+  </ul>
+</body>
+
+</html>
