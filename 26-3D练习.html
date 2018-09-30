@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: url(img/bg.jpeg) no-repeat;
+      /* 需要等比拉伸，直到宽和高都撑满元素 */
+      background-size: cover;
+    }
+
+    ul {
+      width: 200px;
+      height: 200px;
+      /* background-color: red; */
+      position: absolute;
+      bottom: 100px;
+      left: 50%;
+      margin-left: -100px;
+      transform-style: preserve-3d;
+      /* transform: rotateX(-10deg); */
+      animation: sport 10s linear 0s infinite normal;
+
+    }
+
+    /* 动画添加给谁就让谁停止 */
+    ul:hover {
+      animation-play-state: paused;
+    }
+
+    /* hover的时候先把所有的img半透明（蒙版效果） */
+    ul:hover li img {
+      opacity: 0.5;
+    }
+
+    /* 当前的img不透明 */
+    ul li:hover img {
+      opacity: 1;
+    }
+
+    @keyframes sport {
+
+      /* 固定不变得写在前面 */
+      from {
+        transform: rotateX(-10deg) rotateY(0deg);
+      }
+
+      to {
+        transform: rotateX(-10deg) rotateY(360deg);
+      }
+    }
+
+    ul li {
+      list-style: none;
+      width: 200px;
+      height: 200px;
+      font-size: 60px;
+      text-align: center;
+      line-height: 200px;
+      position: absolute;
+    }
+
+
+
+    ul li img {
+      width: 200px;
+      height: 200px;
+      border: 5px solid skyblue;
+      box-sizing: border-box;
+    }
+
+    ul li:nth-child(1) {
+      background-color: black;
+      transform: rotateY(60deg) translateZ(200px);
+    }
+
+    ul li:nth-child(2) {
+      background-color: black;
+      transform: rotateY(120deg) translateZ(200px);
+    }
+
+    ul li:nth-child(3) {
+      background-color: black;
+      transform: rotateY(180deg) translateZ(200px);
+    }
+
+    ul li:nth-child(4) {
+      background-color: black;
+      transform: rotateY(240deg) translateZ(200px);
+    }
+
+    ul li:nth-child(5) {
+      background-color: black;
+      transform: rotateY(300deg) translateZ(200px);
+    }
+
+    ul li:nth-child(6) {
+      background-color: black;
+      transform: rotateY(360deg) translateZ(200px);
+    }
+
+    .heart {
+      width: 100px;
+      height: 100px;
+      position: absolute;
+      left: 100px;
+      bottom: 100px;
+      animation: move 10s linear 0s infinite normal;
+    }
+
+    @keyframes move {
+      0% {
+        left: 100px;
+        bottom: 100px;
+        opacity: 1;
+      }
+
+      20% {
+        left: 300px;
+        bottom: 300px;
+        opacity: 0;
+      }
+
+      40% {
+        left: 500px;
+        bottom: 500px;
+        opacity: 1;
+      }
+
+      60% {
+        left: 800px;
+        bottom: 300px;
+        opacity: 0;
+      }
+
+      80% {
+        left: 1400px;
+        bottom: 100px;
+        opacity: 1;
+      }
+
+      100% {
+        left: 800px;
+        bottom: -200px;
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <ul>
+    <li><img src="img/z1.jpeg"></li>
+    <li><img src="img/z2.jpg"></li>
+    <li><img src="img/z3.jpg"></li>
+    <li><img src="img/z4.jpg"></li>
+    <li><img src="img/z5.jpg"></li>
+    <li><img src="img/z1.jpeg"></li>
+  </ul>
+  <img src="img/heart.jpg" class="heart" alt="">
+</body>
+
+</html>
